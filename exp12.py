@@ -1,0 +1,28 @@
+import pandas as pd
+s = pd.Series([1, 2, 3, 4, 5]) 
+print ("Data series:")
+print(s)
+print()
+df = pd.DataFrame ({
+"Name": ["Alice", "Bob", "Charlie", "David", "Emily"], "Age": [25, 30, 35, 40, 45],
+"Salary": [50000, 60000, 70000, 80000, 90000]
+})
+print("Dataframe:")
+print(df)
+print()
+print("Accessing columns of a data frame:")
+print(df["Name"])
+print(df["Age"])
+print(df["Salary"]) 
+print()
+print("Accessing rows of a data frame:")
+print(df.loc[0])
+print(df.loc[1])
+print(df.loc[2])
+print()
+print("Filtering data in a data frame:")
+print(df[df["Salary"] > 60000])
+print() 
+print("Sorting a data frame:") 
+print(df.sort_values("Salary", ascending=False))
+print()
